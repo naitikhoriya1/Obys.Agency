@@ -1,8 +1,17 @@
+@font-face {
+  font-family: "plain light";
+  src: url(./plain-light-webfont.ttf);
+}
+@font-face {
+  font-family: "silk serif";
+  src: url(./silkserif-lightitalic-webfont.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Plain";
+  font-family: " plain light";
   color: white;
 }
 
@@ -12,6 +21,7 @@ body {
   width: 100%;
   /* background-color: bisque; */
 }
+
 #main {
   position: relative;
   background-color: #111;
@@ -45,13 +55,60 @@ body {
 #line1-part1 h6 {
   font-size: 2vw;
   font-family: "silk serif";
-  font-style: italic;
+  font-weight: 100;
+  /* font-style: italic; */
+}
+#line1-part1 h5 {
+  width: 3vw;
+  text-align: right;
 }
 .line h1 {
   font-size: 6rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   /* margin-bottom: 1rem; */
+}
+.line h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0;
+  animation-name: anime;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* margin-bottom: 1rem; */
+}
+
+@keyframes anime {
+  0% {
+    font-family: "plain light";
+    -webkit-text-stroke: 1px white;
+    color: white;
+    font-weight: 500;
+    opacity: 1;
+  }
+  47% {
+    font-family: "plain light";
+    -webkit-text-stroke: 1px white;
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+  }
+  50% {
+    font-family: "plain light";
+    -webkit-text-stroke: 1px white;
+    color: white;
+    font-weight: 500;
+    opacity: 1;
+  }
+
+  100% {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 500;
+    opacity: 0;
+  }
 }
 #page1 {
   height: 100vh;
